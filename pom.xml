@@ -9,6 +9,7 @@
 		<module>gulimall-coupon</module>
 		<module>gulimall-member</module>
 		<module>gulimall-order</module>
+		<module>renren-fast</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
