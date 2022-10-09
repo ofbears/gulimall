@@ -1,5 +1,6 @@
 package top.bearsof.gulimall.product.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import top.bearsof.gulimall.product.entity.SkuImages;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author bears
  * @since 2022-10-08
  */
+@Mapper
 public interface SkuImagesMapper extends BaseMapper<SkuImages> {
 
 }

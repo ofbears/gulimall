@@ -2,7 +2,7 @@ package top.bearsof.gulimall.product.service.impl;
 
 import top.bearsof.gulimall.product.entity.AttrAttrgroupRelation;
 import top.bearsof.gulimall.product.mapper.AttrAttrgroupRelationMapper;
-import top.bearsof.gulimall.product.service.IAttrAttrgroupRelationService;
+import top.bearsof.gulimall.product.service.AttrAttrgroupRelationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-10-08
  */
 @Service
-public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupRelationMapper, AttrAttrgroupRelation> implements IAttrAttrgroupRelationService {
+public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupRelationMapper, AttrAttrgroupRelation> implements AttrAttrgroupRelationService {
 
 }

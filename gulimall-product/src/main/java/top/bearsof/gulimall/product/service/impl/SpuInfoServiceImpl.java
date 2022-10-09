@@ -2,7 +2,7 @@ package top.bearsof.gulimall.product.service.impl;
 
 import top.bearsof.gulimall.product.entity.SpuInfo;
 import top.bearsof.gulimall.product.mapper.SpuInfoMapper;
-import top.bearsof.gulimall.product.service.ISpuInfoService;
+import top.bearsof.gulimall.product.service.SpuInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-10-08
  */
 @Service
-public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoMapper, SpuInfo> implements ISpuInfoService {
+public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoMapper, SpuInfo> implements SpuInfoService {
 
 }

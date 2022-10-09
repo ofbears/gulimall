@@ -2,7 +2,7 @@ package top.bearsof.gulimall.product.service.impl;
 
 import top.bearsof.gulimall.product.entity.SkuImages;
 import top.bearsof.gulimall.product.mapper.SkuImagesMapper;
-import top.bearsof.gulimall.product.service.ISkuImagesService;
+import top.bearsof.gulimall.product.service.SkuImagesService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-10-08
  */
 @Service
-public class SkuImagesServiceImpl extends ServiceImpl<SkuImagesMapper, SkuImages> implements ISkuImagesService {
+public class SkuImagesServiceImpl extends ServiceImpl<SkuImagesMapper, SkuImages> implements SkuImagesService {
 
 }

@@ -2,7 +2,7 @@ package top.bearsof.gulimall.product.service.impl;
 
 import top.bearsof.gulimall.product.entity.Attr;
 import top.bearsof.gulimall.product.mapper.AttrMapper;
-import top.bearsof.gulimall.product.service.IAttrService;
+import top.bearsof.gulimall.product.service.AttrService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-10-08
  */
 @Service
-public class AttrServiceImpl extends ServiceImpl<AttrMapper,Attr> implements IAttrService {
+public class AttrServiceImpl extends ServiceImpl<AttrMapper,Attr> implements AttrService {
 
 }

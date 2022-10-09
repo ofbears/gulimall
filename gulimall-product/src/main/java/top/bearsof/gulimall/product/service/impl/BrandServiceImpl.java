@@ -2,7 +2,7 @@ package top.bearsof.gulimall.product.service.impl;
 
 import top.bearsof.gulimall.product.entity.Brand;
 import top.bearsof.gulimall.product.mapper.BrandMapper;
-import top.bearsof.gulimall.product.service.IBrandService;
+import top.bearsof.gulimall.product.service.BrandService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-10-08
  */
 @Service
-public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements IBrandService {
+public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements BrandService {
 
 }
