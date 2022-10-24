@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: 2abc8d67-b771-4af7-9014-345b88c49905
+    gateway:
+      routes:
+        - id: test_route
+          uri: https://www.baidu.com/
+          predicates:
+            - Query=url,baidu
+        - id: gulimall_product_route
+          uri: lb://gulimall-product
+          predicates:
+            - Path=/product/**
+        - id: gulimall_admin_route
+          uri: lb://gulimall-admin
+          predicates:
+            - Path=/**
+        - id: gulimall_font_route
+          uri: lb://gulimall-entity
+          predicates:
+            - Path=/**
+
+server:
+  port: 8888

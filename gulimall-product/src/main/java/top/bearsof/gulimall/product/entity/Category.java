@@ -1,9 +1,11 @@
 package top.bearsof.gulimall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -39,6 +41,14 @@ public class Category implements Serializable {
      */
     private Integer catLevel;
 
+    public List<Category> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Category> children) {
+        this.children = children;
+    }
+
     /**
      * 是否显示[0-不显示，1显示]
      */
@@ -63,6 +73,10 @@ public class Category implements Serializable {
      * 商品数量
      */
     private Integer productCount;
+
+
+    @TableField(exist = false)
+    private List<Category> children;
 
     public Long getCatId() {
         return catId;

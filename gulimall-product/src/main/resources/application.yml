@@ -9,6 +9,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        namespace: 2abc8d67-b771-4af7-9014-345b88c49905
   application:
     name: gulimall-product
 mybatis-plus:

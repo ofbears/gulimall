@@ -1,6 +1,7 @@
 package top.bearsof.gulimall.coupon.controller;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 import top.bearsof.gulimall.common.utils.Result;
+import top.bearsof.gulimall.coupon.entity.Coupon;
+import top.bearsof.gulimall.coupon.service.ICouponService;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,10 +28,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/coupon/coupon")
 public class CouponController {
+
+    @Autowired
+    private ICouponService iCouponService;
     @GetMapping("/get/coupon")
     public Result<List<String>> getDemo(){
-        List<String> list = new ArrayList<>();
-        Collections.addAll(list,"王五","赵六","宋七");
+        List<Coupon> list = iCouponService.list();
         return Result.success(200,list);
     }
 

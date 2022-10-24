@@ -1,12 +1,27 @@
 spring:
-  application:
-    name: gulimall-coupon
   cloud:
     nacos:
       config:
         server-addr: localhost:8848
         #配置这个可以启用yaml格式文件作为配置文件,默认为properties
         file-extension: yaml
-        namespace: e4d84c4c-5f4a-4c7d-bf09-f1d28e38ab07
+        namespace: 0c47fe9d-8ada-4334-a517-47f123f16712
+        extension-configs:
+          - data-id: nacos-discovery.yaml
+            group: dev
+            refresh: true
+          - data-id: database.yaml
+            group: dev
+            refresh: true
+          - data-id: mybatis-plus-yaml
+            group: dev
+            refresh: true
+          - data-id: other.yaml
+            group: dev
+            refresh: true
+          - data-id: gulimall-coupon-dev.yaml
+            group: dev
+            refresh: true
+        group: dev
   profiles:
     active: dev
